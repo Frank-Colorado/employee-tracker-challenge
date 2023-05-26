@@ -66,4 +66,23 @@ const employeePrompt = [
   },
 ];
 
-module.exports = { mainPrompt, departmentPrompt, rolePrompt, employeePrompt };
+const updateEmployeePrompt = [
+  {
+    type: "input",
+    name: "employee",
+    message: "Enter the employee to update:",
+  },
+  {
+    type: "input",
+    name: "role",
+    message: "Enter the new role of the employee:",
+  },
+];
+
+module.exports = {
+  mainPrompt,
+  departmentPrompt,
+  rolePrompt,
+  employeePrompt,
+  updateEmployeePrompt,
+};

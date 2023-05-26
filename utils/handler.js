@@ -1,5 +1,10 @@
 // These are the prompts for the inquirer package
-const { departmentPrompt, rolePrompt, employeePrompt } = require("./prompts");
+const {
+  departmentPrompt,
+  rolePrompt,
+  employeePrompt,
+  updateEmployeePrompt,
+} = require("./prompts");
 // This is the inquirer package
 const inquirer = require("inquirer");
 // These are the Classes that will be used to create new data in the database
@@ -44,7 +49,8 @@ const handleChoice = async (choice) => {
       return newRole;
       break;
     case "Update Employee Role":
-      // call function
+      const updateEmployeeAnswer = await inquirer.prompt(updateEmployeePrompt);
+      const { employeeId, updatedRole } = updateEmployeeAnswer;
       console.log("Update Employee Role");
       break;
     // If the user chooses to quit, the application will exit
