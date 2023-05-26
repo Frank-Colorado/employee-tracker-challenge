@@ -38,7 +38,7 @@ const rolePrompt = [
   },
   {
     type: "input",
-    name: "department",
+    name: "departmentId",
     message: "Enter the department ID of the role:",
   },
 ];
@@ -56,12 +56,12 @@ const employeePrompt = [
   },
   {
     type: "input",
-    name: "role",
+    name: "roleId",
     message: "Enter the role ID of the employee:",
   },
   {
     type: "input",
-    name: "manager",
+    name: "managerId",
     message: "Enter the manager ID of the employee:",
   },
 ];
