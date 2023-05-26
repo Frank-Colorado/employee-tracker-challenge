@@ -21,4 +21,8 @@ class Role {
       console.log({ err });
     }
   }
+  static async getAll() {
+    const [result] = await connection.query("SELECT * FROM role");
+    return result;
+  }
 }
