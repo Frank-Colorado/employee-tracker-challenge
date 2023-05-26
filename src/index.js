@@ -5,7 +5,8 @@ const { mainPrompt } = require("../utils/prompts");
 // This is an async function called init
 // This will be the primary function that will be called to start the application
 const init = async () => {
-  // This is an object called answer that contains the user's choice
+  // Inquirer is used to prompt the user with the mainPrompt array
+  // The user's answer is stored in a variable called answer
   const answer = await inquirer.prompt(mainPrompt);
   // This is a variable called choice that contains the user's choice
   const choice = answer.choice;
