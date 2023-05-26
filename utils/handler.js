@@ -1,5 +1,7 @@
-// A function that handles the user's choices
+// This is a function called handleChoice
+// It has one parameter: choice
 const handleChoice = async (choice) => {
+  // A switch statement is used to determine which function to call based on the user's choice
   switch (choice) {
     case "View All Employees":
       // call function
@@ -29,6 +31,7 @@ const handleChoice = async (choice) => {
       // call function
       console.log("Update Employee Role");
       break;
+    // If the user chooses to quit, the application will exit
     case "Quit":
       console.log("Goodbye!");
       process.exit(0);
