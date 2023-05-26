@@ -27,3 +27,5 @@ class Role {
     return result;
   }
 }
+
+module.exports = Role;
