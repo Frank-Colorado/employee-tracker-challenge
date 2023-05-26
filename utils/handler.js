@@ -50,8 +50,9 @@ const handleChoice = async (choice) => {
       break;
     case "Update Employee Role":
       const updateEmployeeAnswer = await inquirer.prompt(updateEmployeePrompt);
-      const { employeeId, updatedRole } = updateEmployeeAnswer;
-      console.log("Update Employee Role");
+      const { employeeId, newRoleId } = updateEmployeeAnswer;
+      const updatedEmployee = await Employee.updateRole(employeeId, newRoleId);
+      return updatedEmployee;
       break;
     // If the user chooses to quit, the application will exit
     case "Quit":

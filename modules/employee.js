@@ -24,7 +24,24 @@ class Employee {
     }
   }
   static async getAll() {
-    const [result] = await connection.query("SELECT * FROM employee");
-    return result;
+    try {
+      const [result] = await connection.query("SELECT * FROM employee");
+      return result;
+    } catch (err) {
+      console.log({ err });
+    }
+  }
+
+  static async updateRole(id, roleId) {
+    try {
+      const [result] = await connection.query(
+        "UPDATE employee SET role_id = (?) WHERE id = (?)",
+        [roleId, id]
+      );
+      console.log("Employee role updated successfully!");
+      return result;
+    } catch (err) {
+      console.log({ err });
+    }
   }
 }
