@@ -33,7 +33,6 @@ const handleChoice = async (choice) => {
       console.log("Goodbye!");
       process.exit(0);
   }
-  init();
 };
 
 module.exports = handleChoice;

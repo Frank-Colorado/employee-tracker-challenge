@@ -23,6 +23,7 @@ const init = async () => {
   ]);
   const choice = answer.choice;
   handler(choice);
+  init();
 };
 
 init();
