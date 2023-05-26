@@ -23,8 +23,8 @@ const handleChoice = async (choice) => {
       break;
     case "Add Employee":
       const employeeAnswer = await inquirer.prompt(employeePrompt);
-      const { firstName, lastName, role, manager } = employeeAnswer;
-      const employee = new Employee(firstName, lastName, role, manager);
+      const { firstName, lastName, roleId, manager } = employeeAnswer;
+      const employee = new Employee(firstName, lastName, roleId, manager);
       const [message, newEmployee] = await employee.create();
       console.log(message);
       return newEmployee;
@@ -38,9 +38,10 @@ const handleChoice = async (choice) => {
       break;
     case "Add Role":
       const roleAnswer = await inquirer.prompt(rolePrompt);
-      const { title, salary, department } = roleAnswer;
-      const role = new Role(title, salary, department);
-      console.log("Add Role");
+      const { title, salary, departmentId } = roleAnswer;
+      const role = new Role(title, salary, departmentId);
+      const [newRole] = await role.create();
+      return newRole;
       break;
     case "Update Employee Role":
       // call function
