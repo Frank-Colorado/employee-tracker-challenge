@@ -4,7 +4,7 @@
 
 ## Description
 
-This applciation was created to complete challenge 11 for my coding bootcamp. This app is an employee tracker that is run through the terminal. It allows the user to view and create the departments, roles, and employees for their business.
+This applciation was created to complete challenge 12 for my coding bootcamp. This app is an employee tracker that is run through the terminal. It allows the user to view and create the departments, roles, and employees for their business.
 
 ## Table of Contents
 
