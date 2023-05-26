@@ -19,6 +19,10 @@ class Department {
       console.log({ err });
     }
   }
+  static async getAll() {
+    const [result] = await connection.query("SELECT * FROM department");
+    return result;
+  }
 }
 
 module.exports = Department;
