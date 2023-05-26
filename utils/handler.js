@@ -1,4 +1,9 @@
+// These are the prompts for the inquirer package
 const { departmentPrompt, rolePrompt, employeePrompt } = require("./prompts");
+// This is the inquirer package
+const inquirer = require("inquirer");
+// These are the Classes that will be used to create new data in the database
+
 // This is a function called handleChoice
 // It has one parameter: choice
 const handleChoice = async (choice) => {
