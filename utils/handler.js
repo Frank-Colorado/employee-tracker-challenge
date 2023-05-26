@@ -3,23 +3,23 @@ const { departmentPrompt, rolePrompt, employeePrompt } = require("./prompts");
 // This is the inquirer package
 const inquirer = require("inquirer");
 // These are the Classes that will be used to create new data in the database
-
+const { Department, Role, Employee } = require("../modules");
 // This is a function called handleChoice
 // It has one parameter: choice
 const handleChoice = async (choice) => {
   // A switch statement is used to determine which function to call based on the user's choice
   switch (choice) {
     case "View All Employees":
-      // call function
-      console.log("View All Employees");
+      const employees = await Employee.getAll();
+      console.table(employees);
       break;
     case "View All Departments":
-      // call function
-      console.log("View All Departments");
+      const departments = await Department.getAll();
+      console.table(departments);
       break;
     case "View All Roles":
-      // call function
-      console.log("View All Roles");
+      const roles = await Role.getAll();
+      console.table(roles);
       break;
     case "Add Employee":
       const employeeAnswer = await inquirer.prompt(employeePrompt);
