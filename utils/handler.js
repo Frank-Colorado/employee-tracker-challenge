@@ -17,15 +17,15 @@ const handleChoice = async (choice) => {
       console.log("View All Roles");
       break;
     case "Add Employee":
-      // call function
+      const employeeAnswer = await inquirer.prompt(employeePrompt);
       console.log("Add Employee");
       break;
     case "Add Department":
-      // call function
+      const departmentAnswer = await inquirer.prompt(departmentPrompt);
       console.log("Add Department");
       break;
     case "Add Role":
-      // call function
+      const roleAnswer = await inquirer.prompt(rolePrompt);
       console.log("Add Role");
       break;
     case "Update Employee Role":
