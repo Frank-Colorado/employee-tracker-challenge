@@ -43,4 +43,27 @@ const rolePrompt = [
   },
 ];
 
-module.exports = { mainPrompt, departmentPrompt, rolePrompt };
+const employeePrompt = [
+  {
+    type: "input",
+    name: "firstName",
+    message: "Enter the first name of the employee:",
+  },
+  {
+    type: "input",
+    name: "lastName",
+    message: "Enter the last name of the employee:",
+  },
+  {
+    type: "input",
+    name: "role",
+    message: "Enter the role of the employee:",
+  },
+  {
+    type: "input",
+    name: "manager",
+    message: "Enter the manager of the employee:",
+  },
+];
+
+module.exports = { mainPrompt, departmentPrompt, rolePrompt, employeePrompt };
