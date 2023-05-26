@@ -44,7 +44,7 @@ N/A
 
 ## Credits
 
--- resources
+https://developer.mozilla.org/en-US/docs/Glossary/Static_method : This documentation was used when impleting static methods for my Classes in this project.
 
 ## License
 
