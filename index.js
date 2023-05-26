@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const handler = require("./utils/handler");
 
 const options = [
   "View All Employees",
@@ -21,8 +22,7 @@ const init = async () => {
     },
   ]);
   const choice = answer.choice;
-
-  init();
+  handler(choice);
 };
 
 init();
