@@ -22,4 +22,8 @@ class Employee {
       console.log({ err });
     }
   }
+  static async getAll() {
+    const [result] = await connection.query("SELECT * FROM employee");
+    return result;
+  }
 }
