@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const handler = require("./utils/handler");
+const handler = require("../utils/handler");
 
 // This is an array called options that contains the options that will be displayed to the user
 const options = [
