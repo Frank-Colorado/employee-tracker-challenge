@@ -4,6 +4,21 @@ class Department {
   constructor(name) {
     this.name = name;
   }
+  async create() {
+    try {
+      const [result] = await connection.query(
+        "INSERT INTO department (name) VALUES (?)",
+        [this.name]
+      );
+      const [department] = await connection.query(
+        "SELECT * FROM department WHERE id = (?)",
+        [result.insertId]
+      );
+      return "Department added successfully!", department;
+    } catch (err) {
+      console.log({ err });
+    }
+  }
 }
 
 module.exports = Department;
