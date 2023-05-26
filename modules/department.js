@@ -14,7 +14,8 @@ class Department {
         "SELECT * FROM department WHERE id = (?)",
         [result.insertId]
       );
-      return "Department added successfully!", department;
+      console.log("Department added successfully!");
+      return department;
     } catch (err) {
       console.log({ err });
     }

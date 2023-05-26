@@ -16,7 +16,8 @@ class Role {
         "SELECT * FROM role WHERE id = (?)",
         [result.insertId]
       );
-      return "Role added successfully!", role;
+      console.log("Role added successfully!");
+      return role;
     } catch (err) {
       console.log({ err });
     }

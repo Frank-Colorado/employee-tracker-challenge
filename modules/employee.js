@@ -17,7 +17,8 @@ class Employee {
         "SELECT * FROM employee WHERE id = (?)",
         [result.insertId]
       );
-      return "Employee added successfully!", employee;
+      console.log("Employee added successfully!");
+      return employee;
     } catch (err) {
       console.log({ err });
     }

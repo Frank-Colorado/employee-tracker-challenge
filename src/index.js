@@ -11,7 +11,9 @@ const init = async () => {
   // This is a variable called choice that contains the user's choice
   const choice = answer.choice;
   // The handler function is called and passed the user's choice
-  handler(choice);
+  const data = await handler(choice);
+  // The data returned from the handler function is logged to the console as a table
+  console.table(data);
   // Recursion is implemented to call the init function again until the user quits
   init();
 };

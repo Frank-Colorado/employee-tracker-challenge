@@ -11,26 +11,35 @@ const handleChoice = async (choice) => {
   switch (choice) {
     case "View All Employees":
       const employees = await Employee.getAll();
-      console.table(employees);
+      return employees;
       break;
     case "View All Departments":
       const departments = await Department.getAll();
-      console.table(departments);
+      return departments;
       break;
     case "View All Roles":
       const roles = await Role.getAll();
-      console.table(roles);
+      return roles;
       break;
     case "Add Employee":
       const employeeAnswer = await inquirer.prompt(employeePrompt);
-      console.log("Add Employee");
+      const { firstName, lastName, role, manager } = employeeAnswer;
+      const employee = new Employee(firstName, lastName, role, manager);
+      const [message, newEmployee] = await employee.create();
+      console.log(message);
+      return newEmployee;
       break;
     case "Add Department":
       const departmentAnswer = await inquirer.prompt(departmentPrompt);
-      console.log("Add Department");
+      const { name } = departmentAnswer;
+      const department = new Department(name);
+      const [newDepartment] = await department.create();
+      return newDepartment;
       break;
     case "Add Role":
       const roleAnswer = await inquirer.prompt(rolePrompt);
+      const { title, salary, department } = roleAnswer;
+      const role = new Role(title, salary, department);
       console.log("Add Role");
       break;
     case "Update Employee Role":
