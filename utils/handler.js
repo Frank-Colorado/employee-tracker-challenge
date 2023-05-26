@@ -1,3 +1,4 @@
+const { departmentPrompt, rolePrompt, employeePrompt } = require("./prompts");
 // This is a function called handleChoice
 // It has one parameter: choice
 const handleChoice = async (choice) => {
