@@ -40,7 +40,7 @@ N/A
 
 ## Usage
 
--- Video Tutorial
+This is a link to a walkthrough video on how to use this app: https://drive.google.com/file/d/1yA76_95frah5aoBg2Qt56FYlXG4mSXG-/view
 
 ## Credits
 
