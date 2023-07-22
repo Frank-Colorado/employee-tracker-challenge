@@ -34,6 +34,7 @@ class Employee {
 
   static async updateRole(id, roleId) {
     try {
+      console.log("here", id, roleId);
       const [result] = await connection.query(
         "UPDATE employee SET role_id = (?) WHERE id = (?)",
         [roleId, id]

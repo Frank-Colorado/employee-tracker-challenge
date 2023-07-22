@@ -53,8 +53,10 @@ const handleChoice = async (choice) => {
     // If the user chooses to update an employee's role, the user will be prompted to select the employee and the new role
     case "Update Employee Role":
       const updateEmployeeAnswer = await inquirer.prompt(updateEmployeePrompt);
-      const { employeeId, newRoleId } = updateEmployeeAnswer;
-      const updatedEmployee = await Employee.updateRole(employeeId, newRoleId);
+      const updatedEmployee = await Employee.updateRole(
+        updateEmployeeAnswer.employee,
+        updateEmployeeAnswer.role
+      );
       return updatedEmployee;
 
     // If the user chooses to quit, the application will exit
